@@ -26,7 +26,7 @@ import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import SignupLogin from './components/SignupLogin';
-
+import OnboardingForm from './components/OnboardingForm';
 function LandingPage() {
   return (
     <>
@@ -45,6 +45,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/join" element={<SignupLogin />} />
+        <Route path="/onboarding" element={<OnboardingForm />} />
       </Routes>
     </Router>
   );

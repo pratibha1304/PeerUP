@@ -1,15 +1,31 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // 👈 Add this
 import './SignupLogin.css';
 
 function SignupLogin() {
   const [isLogin, setIsLogin] = useState(false);
+  const navigate = useNavigate(); // 👈 Hook to redirect
+
+  // 👇 Form submit logic
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (isLogin) {
+      // ✅ Redirect to onboarding form after login
+      navigate('/onboarding');
+    } else {
+      // You can save user data later
+      console.log('Signup submitted');
+    }
+  };
 
   return (
     <div className="signup-login-wrapper">
       <div className="signup-form-box">
         <h2>{isLogin ? 'Welcome Back 👋' : 'Let’s Get You Onboard ✨'}</h2>
 
-        <form>
+        {/* 👇 Add the handler here */}
+        <form onSubmit={handleSubmit}>
           {!isLogin && (
             <>
               <div className="input-group">
@@ -56,15 +72,3 @@ function SignupLogin() {
 }
 
 export default SignupLogin;
-
-// import React from 'react';
-
-// function SignupLogin() {
-//   return (
-//     <section className="signup-login">
-//       <h1 style={{ color: 'red' }}>✅ This is the Signup/Login Page</h1>
-//     </section>
-//   );
-// }
-
-// export default SignupLogin;

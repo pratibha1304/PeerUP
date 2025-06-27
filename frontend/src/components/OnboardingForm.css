@@ -1,0 +1,150 @@
+.onboarding-form {
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #fdf0f3, #f1f4ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.onboarding-form form {
+  background: #ffffffea;
+  backdrop-filter: blur(12px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 650px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: none; }
+}
+
+.onboarding-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #2c2c2c;
+}
+
+/* Section */
+.form-section {
+  margin-bottom: 28px;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Radio Group */
+.radio-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8f8ff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.radio-group input[type="radio"] {
+  accent-color: #ff6b6b;
+}
+
+.radio-group label:hover {
+  background: #fffafc;
+  border-color: #ffbaba;
+}
+
+/* Skill Row */
+.skill-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.skill-row input,
+.skill-row select {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+}
+
+button[type="button"] {
+  background: transparent;
+  color: #444;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 5px;
+  text-decoration: underline;
+}
+
+/* Chips */
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  padding: 8px 14px;
+  border-radius: 16px;
+  background-color: #e8e8f3;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chip:hover {
+  background-color: #dcdced;
+}
+
+.chip.selected {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+/* Select + Submit */
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #ff6b6b;
+  color: white;
+  font-size: 1.1rem;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #e45757;
+}
