@@ -1,3 +1,22 @@
+// import React from 'react';
+
+// import Hero from './components/Hero';
+
+// function App() {
+//   return (
+//     <div>
+//       <Hero />
+//       <WhyPeerUp />
+//       <HowItWorks />
+//       <Testimonials />
+//       <Footer /> 
+//     </div>
+//   );
+// }
+
+
+// export default App;
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -6,7 +25,7 @@ import WhyPeerUp from './components/WhyPeerUp';
 import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
-import SignupLogin from './components/SignupLogin'; // 👈 import new component
+import SignupLogin from './components/SignupLogin';
 
 function LandingPage() {
   return (
@@ -26,7 +45,6 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/join" element={<SignupLogin />} />
-        {/* Add more routes here as you build */}
       </Routes>
     </Router>
   );
