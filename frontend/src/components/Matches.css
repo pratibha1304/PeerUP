@@ -1,0 +1,57 @@
+.matches {
+  padding: 40px;
+  text-align: center;
+}
+
+.profile-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.profile-card:hover {
+  transform: scale(1.03);
+}
+
+.swipe-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.like-btn, .dislike-btn {
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.like-btn {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.dislike-btn {
+  background-color: #ddd;
+  color: #333;
+}
+
+.like-btn:hover {
+  background-color: #e04a4a;
+}
+
+.dislike-btn:hover {
+  background-color: #bbb;
+}

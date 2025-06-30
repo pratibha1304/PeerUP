@@ -1,0 +1,51 @@
+.matched-profiles {
+  padding: 40px;
+  text-align: center;
+}
+
+.profile-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 20px;
+  width: 280px;
+  text-align: left;
+}
+
+.profile-card h3 {
+  margin-top: 10px;
+}
+
+.profile-card p {
+  margin: 5px 0;
+}
+
+.avatar {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
+.chat-btn {
+  margin-top: 10px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.chat-btn:hover {
+  background: #e94d4d;
+}

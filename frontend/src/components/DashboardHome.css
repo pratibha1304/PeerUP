@@ -1,0 +1,59 @@
+.dashboard-home {
+  padding: 2rem;
+  color: #2c2c2c;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard-home h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-home p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.action-card {
+  background: #fff2f7;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  text-align: left;
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  background: #ffe2ed;
+}
+
+.action-card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #e43f75;
+}
+
+.action-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+.dashboard-quote {
+  font-style: italic;
+  color: #777;
+  background: #fef0f4;
+  padding: 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+}

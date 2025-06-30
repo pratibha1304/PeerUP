@@ -39,12 +39,40 @@ const OnboardingForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const data = { role, goal, skills, interests, vibe, availability, interaction };
-    console.log("Onboarding data:", data);
-    navigate('/dashboard');
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const data = { role, goal, skills, interests, vibe, availability, interaction };
+  //   console.log("Onboarding data:", data);
+  //   navigate('/dashboard');
+  // };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const userId = localStorage.getItem('userId'); // ✅ get stored ID
+
+  const onboardingData = {
+    userId,
+    role,
+    goal,
+    skills,
+    interests,
+    vibe,
+    availability,
+    interaction,
   };
+
+
+  const res = await fetch('http://localhost:5000/api/onboarding', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(onboardingData),
+  });
+
+  const result = await res.json();
+  alert(result.message || result.error);
+  navigate('/dashboard'); // or wherever your flow leads
+};
+
 
   return (
     <section className="onboarding-form">
